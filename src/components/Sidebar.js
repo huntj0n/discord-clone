@@ -1,5 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice'
 
 import SidebarChannel from './SidebarChannel';
 
@@ -15,6 +17,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 
 
 function Sidebar() {
+
+    const user = useSelector(selectUser)
+
     return (
         <div className="sidebar">
             <div className="sidebar__top">
