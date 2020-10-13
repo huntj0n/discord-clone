@@ -1,18 +1,27 @@
 import React from 'react';
-// import { Counter } from './features/counter/Counter';
 import './App.css';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 import Sidebar from './components/Sidebar';
 import Chat from './components/Chat';
+import Login from './components/Login';
 
 function App() {
+
+  const user = useSelector(selectUser)
+
   return (
     <div className="app">
-      <h1>LETS BUILD A DISCORD CLONE</h1>
-
-    <Sidebar />
-
-    <Chat />
+      {user ? (
+        <>
+          <Sidebar />
+          <Chat />
+        </>
+      ):(
+        <Login />
+      )}
+      
 
     </div>
   );
