@@ -8,6 +8,10 @@ import AddIcon from '@material-ui/icons/Add';
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import CallIcon from '@material-ui/icons/Call';
+import { Avatar } from '@material-ui/core';
+import MicIcon from '@material-ui/icons/Mic';
+import HeadsetIcon from '@material-ui/icons/Headset';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 
 function Sidebar() {
@@ -37,6 +41,7 @@ function Sidebar() {
                     <SidebarChannel />
                 </div>
             </div>
+
             <div className="sidebar__voice">
                 <SignalCellularAltIcon 
                     className="sidebar__voiceIcon"
@@ -49,6 +54,20 @@ function Sidebar() {
                 <div className="sidebar__voiceIcons">
                     <InfoOutlinedIcon /> 
                     <CallIcon/>
+                </div>
+            </div>
+
+            <div className="sidebar__profile">
+                <Avatar />
+                <div className="sidebar__profileInfo">
+                    <h3>@TeriyakiPappi</h3>
+                    <p>#IDIDIDIDID</p>
+                </div>
+                
+                <div className="sidebar__profileIcoons">
+                    <MicIcon />
+                    <HeadsetIcon />
+                    <SettingsIcon />
                 </div>
             </div>
         </div>
